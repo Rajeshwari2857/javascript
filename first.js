@@ -103,11 +103,50 @@ subtract = function (num1, num2, num3=1) {
 console.log(subtract(5,3))
 
 //arrow functions
-//we use arrow functions when we only have one return statement
+//used when return statement is just a sentence
 let multiply = (num1, num2) => (num1*num2);
 // or multiple = (num1, num2) => {
 //     return num1*num2
 // }
+
+//methods
+let laptop = {
+    cpu: 'i5',
+    ram: 8,
+    brand: 'hp',
+
+    naming: function(){
+        console.log('my brand is ' + this.brand); //refers to this particular obj
+        console.log(`i have ${this.ram} GB RAM`);
+    }
+}
+laptop.naming();
+
+//constructors
+function Person(name, job) {
+    this.name = name,
+    this.job = job,
+
+    this.work = function(){
+        console.log('solving bugs');
+    }
+}
+
+let per1 = new Person('priya', 'designer');
+let per2 = new Person('bhumi', 'engineer');
+
+per1.job = 'architect';
+
+console.log(per2.job);
+per2.work();
+
+
+//ARRAYS
+let data = ['preet', 6, function(){
+    console.log(`hi`)
+}]
+data[3] = {tech: 'JS'} //tech is an object here
+console.log(data[1])
 
 
 //ARRAY METHODS
