@@ -9,4 +9,4 @@ let users = [
     { name: "a" , age: 17},
     { name: "b", age: 19}
 ];
-let new_users = users.map(funtion ages())
+let new_users = users.map(funtion age())

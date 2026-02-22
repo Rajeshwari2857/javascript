@@ -60,14 +60,6 @@ console.log([]==[]); //[] and [] are diff objects
 //use === to see if values and types both match
 console.log(5 === "5");
 
-//FUNCTIONS
-function test() {
-    let x = 10;
-};
-y = test();
-console.log(y);
-//default is undefined
-
 //objects
 let alien = {
     name: "navin",
@@ -80,8 +72,43 @@ console.log(alien['name']);
 console.log(alien[techhh]); //only where we use this method
 
 
-//input
-age = prompt("enter age: ");
+//FUNCTIONS
+function test() {
+    let x = 10;
+}
+y = test();
+console.log(y);
+//default is undefined
+
+function greet(user) {
+    return `hello ${user}!!` 
+}
+
+let str = greet('navin');
+console.log(str);
+
+//functions can also be assigned to an obj
+add = function (num1, num2) {
+    return num1 + num2
+}
+
+let result = add(4,6)
+console.log(result)
+
+//when arguments arent passed
+subtract = function (num1, num2, num3=1) {
+    return num1 - num2 - num3
+}
+//1 is set as default value for num3 if it isnt passed
+console.log(subtract(5,3))
+
+//arrow functions
+//we use arrow functions when we only have one return statement
+let multiply = (num1, num2) => (num1*num2);
+// or multiple = (num1, num2) => {
+//     return num1*num2
+// }
+
 
 //ARRAY METHODS
 //1.maps
